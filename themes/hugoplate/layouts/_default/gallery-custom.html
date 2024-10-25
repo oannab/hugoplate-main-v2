@@ -1,0 +1,8 @@
+{{ $i := 0 }}
+{{ range (readDir (.Get "dir")) }}
+  {{ $i = add $i 1 }}
+  <figure>
+    <img src="{{ $.Site.BaseURL }}{{ .Get "dir" }}/{{ .Name }}" title="Project {{ $i }}" alt="Project {{ $i }}" style="height: {{ .Get "height" }}px; width: {{ .Get "width" }}px;">
+    <figcaption>Project {{ $i }}</figcaption>
+  </figure>
+{{ end }}
