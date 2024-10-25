@@ -26,7 +26,7 @@ body:
     validations:
       required: true
 
-  - type: input
+  - type: inpxut
     id: operating-system
     attributes:
       label: What is your Operating System
