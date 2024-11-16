@@ -1,0 +1,15 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Studio Facet"
+defaultContentLanguage = "en"
+enableMultilingual = true
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    contentDir = "content/english"
+    weight = 1
+
+[params]
+  author = "Author Name"
+  description = "A description for your Hugo site"

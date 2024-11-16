@@ -1,0 +1,41 @@
+{{ define "main" }}
+  {{ partial "gallery-custom.html" . }}
+<article class="project-details">
+  <h1>{{ .Title }}</h1>
+  <p>{{ .Params.short_description }}</p>
+  <div class="project-gallery">
+    {{ $galleryPath := printf "content/english/projects/%s/gallery" (path.Base .File.Dir) }}
+    {{ range (readDir $galleryPath) }}
+      {{ $imgPath := printf "/english/projects/%s/gallery/%s" (path.Base .File.Dir) .Name }}
+      <figure>
+        <img src="{{ $imgPath }}" alt="{{ $.Title }}">
+      </figure>
+    {{ end }}
+  </div>
+</article>
+
+<style>
+  .project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .project-gallery figure {
+    flex: 1 1 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .project-gallery img {
+    width: 100%;
+    height: auto;
+  }
+</style>
+{{ end }}
+
+
+
+
+
+<!-- Constructs the URL for each image, which Hugo will use to display it.
+            The first %s substitutes the project directory (like project-1), and the second %s substitutes the image file name (like 01.jpg). -->

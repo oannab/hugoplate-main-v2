@@ -1,0 +1,51 @@
+{{ define "main" }}
+  {{ partial "gallery-custom.html" . }}
+<div class="projects-overview">
+  <h1>{{ .Title }}</h1>
+  <p>{{ .Description }}</p>
+  <div class="project-list">
+    {{ range .Pages }}
+      <div class="project-item">
+        <a href="{{ .Permalink }}">
+          <img src="{{ .Params.image }}" alt="{{ .Title }}" />
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Params.short_description }}</p>
+        </a>
+      </div>
+    {{ end }}
+  </div>
+</div>
+
+<style>
+  .projects-overview {
+    text-align: center;
+    padding: 20px;
+  }
+  .project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+  .project-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+  .project-item:hover {
+    transform: scale(1.05);
+  }
+  .project-item img {
+    width: 100%;
+    height: auto;
+  }
+  .project-item h3 {
+    margin: 10px 0;
+  }
+  .project-item p {
+    padding: 0 10px 10px;
+  }
+</style>
+
+

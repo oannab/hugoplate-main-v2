@@ -34,3 +34,8 @@ features:
       link: ""
 ---
 
+<hr>
+
+{{< slider dir="images/gallery" class="custom-slider" height="400" width="400" webp="true" command="Fit" option="" zoomable="true" >}}
+
+<hr>

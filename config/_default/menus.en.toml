@@ -1,63 +1,78 @@
-############# English navigation ##############
+############# English Navigation ##############
 
-# main menu
+# Main Menu
 [[main]]
-name = "Home"
-url = "/"
-weight = 1
-
-[[main]]
-name = "About"
-url = "/about"
-weight = 2
+  name = "Home"
+  url = "/"
+  weight = 1
 
 [[main]]
-name = "Projects"
-url = "/projects"
-weight = 3
+  name = "Projects"
+  url = "/projects/"
+  weight = 2
 
 [[main]]
-weight = 4
-name = "Pages"
+  name = "Services"
+  url = "/services/"
+  weight = 3
 
 [[main]]
-parent = "Pages"
-name = "Services"
-url = "/services"
+  name = "About"
+  url = "/about/"
+  weight = 4
 
 [[main]]
-parent = "Pages"
-name = "Contact"
-url = "/contact"
+  name = "Contact"
+  url = "/contact/"
+  weight = 5
 
 [[main]]
-parent = "Pages"
-name = "Authors"
-url = "/authors"
+  parent = "Services"
+  name = "Architecture"
+  url = "/architecture"
+  weight = 6
 
 [[main]]
-parent = "Pages"
-name = "Categories"
-url = "/categories"
+parent = "Services"
+name = "Architecture"
+url = "/architecture"
+weight = 7
 
 [[main]]
-parent = "Pages"
-name = "404 Page"
-url = "/404"
+parent = "Services"
+name = "Planning"
+url = "/planning"
+weight = 8
 
+[[main]]
+parent = "Services"
+name = "Interior Design"
+url = "/design"
+weight = 9
 
-# footer menu
+[[main]]
+parent = "Services"
+name = "Project Management"
+url = "/management"
+weight = 10
+
+#[[main]]
+#name = "404 Page"
+#url = "/404"
+#weight = 10
+
+# Footer Menu
 [[footer]]
-name = "About"
-url = "/about"
-weight = 1
+  name = "About"
+  url = "/about"
+  weight = 1
 
 [[footer]]
-name = "Projects"
-url = "/projects"
-weight = 2
+  name = "Projects"
+  url = "/projects"
+  weight = 2
 
 [[footer]]
-name = "Privacy Policy"
-url = "/privacy-policy"
-weight = 3
+  name = "Privacy Policy"
+  url = "/privacy-policy"
+  weight = 3
